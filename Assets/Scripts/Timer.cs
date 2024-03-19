@@ -2,32 +2,43 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEditor;
 
 public class Timer : MonoBehaviour
+
 {
-    public Text timerText;
-    public Text infoText;
 
-    private float secondsCount;
-    private int minuteCount;
+    public GameObject RestartLevel;
+    [SerializeField] TextMeshProUGUI timerText;
+    [SerializeField] float remaininingTime;
 
-    void Update()
+
+    private void Update()
     {
-        UpdateTimerUI();
-    }
-
-    //call this on update
-    public void UpdateTimerUI()
-    {
-        //set timer UI
-        secondsCount += Time.deltaTime;
-        timerText.text = minuteCount + "m:" + (int)secondsCount + "s";
-        if (secondsCount >= 60)
+        if (remaininingTime > 0)
         {
-            minuteCount++;
-            secondsCount = 0;
+            remaininingTime -= Time.deltaTime;
         }
+
+        else if (remaininingTime < 0)
+        {
+            remaininingTime = 0;
+            Time.timeScale = 0;
+            RestartLevel.SetActive(true);
+        }
+        int minutes = Mathf.FloorToInt(remaininingTime / 60);
+        int seconds = Mathf.FloorToInt(remaininingTime % 60);
+        timerText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
     }
 
+    private void Start()
+    {
+        RestartLevel.SetActive (false);
+        Time.timeScale = 1;
+    }
 }
+
+
+

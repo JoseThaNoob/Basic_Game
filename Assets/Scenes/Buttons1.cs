@@ -8,7 +8,7 @@ public class Buttons1 : MonoBehaviour
 {
     public void Playgame()
     {
-        SceneManager.LoadScene("Level_1");
+        SceneManager.LoadScene("Level Selector");
     }
 
 

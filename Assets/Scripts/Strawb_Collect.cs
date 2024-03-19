@@ -7,8 +7,9 @@ using TMPro;
 public class Strawb_Collect : MonoBehaviour
 {
     private int strawbs = 0;
+    [SerializeField] private int total = 0;
 
-    [SerializeField] private Text strawbText;
+    [SerializeField] private TextMeshProUGUI strawbText;
     public Text infoText;
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -17,7 +18,7 @@ public class Strawb_Collect : MonoBehaviour
         {
             Destroy(collision.gameObject);
             strawbs++;
-            strawbText.text = "Strawbs Collected:  " + strawbs;
+            strawbText.text = "Strawbs Collected: " + strawbs;
         }
     }
 }
