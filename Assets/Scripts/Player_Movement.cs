@@ -29,6 +29,10 @@ public class Player_Movement : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        if (Time.timeScale == 0f)
+        {
+            return;
+        }
         dirX = Input.GetAxisRaw("Horizontal");
         rb.velocity = new Vector2(dirX * moveSpeed, rb.velocity.y);
 

@@ -12,17 +12,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_1.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Level_Transition.unity
+    guid: e7a2b8bc793af514f9c2a65b7f2cb334
+  - enabled: 1
     path: Assets/Scenes/Level_2.unity
     guid: f0f873b677b407c47aa2a05200ebc5de
+  - enabled: 1
+    path: Assets/Scenes/Level_Transition 1.unity
+    guid: c06df088d34b9f8408f61065f2fa5156
   - enabled: 1
     path: Assets/Scenes/Level_3.unity
     guid: ff97c104583616445bf4eae718d9c249
   - enabled: 1
+    path: Assets/Scenes/Level_Transition 2.unity
+    guid: 5b7a6e8f63e830e45a863bd21efbfa8f
+  - enabled: 1
     path: Assets/Scenes/Level_4.unity
     guid: 742ce87018f673a459b993553531b80c
   - enabled: 1
+    path: Assets/Scenes/Level_Transition 3.unity
+    guid: 98f1cb3e55dfe7d41af1ab39f9fb8ee7
+  - enabled: 1
     path: Assets/Scenes/Level_5.unity
     guid: 7770e9e032e89c041bdb2eb6f179b581
+  - enabled: 1
+    path: Assets/Scenes/Level_Transition 4.unity
+    guid: d6adfc66eb6d4e94181c973a1b261f8f
   - enabled: 1
     path: Assets/Scenes/Level_6.unity
     guid: fd2d80e12f1b18247a51b4be0206e964

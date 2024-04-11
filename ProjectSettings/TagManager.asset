@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Strawb
   - Trap
+  - Sprite
+  - Cherry
   layers:
   - Default
   - TransparentFX

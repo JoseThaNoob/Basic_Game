@@ -13,7 +13,7 @@ public class Finish : MonoBehaviour
     {
         if (collision.gameObject.name == "Player" && !levelCompleted)
         {
-            UnlockedNewLevel();
+            UnlockNewLevel();
             levelCompleted = true;
             Invoke("CompleteLevel", 0.5f);
         }
@@ -24,10 +24,10 @@ public class Finish : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void UnlockedNewLevel()
+    public void UnlockNewLevel()
     {
         if (SceneManager.GetActiveScene().buildIndex >= PlayerPrefs.GetInt("ReachedIndex"))
-            {
+        {
             PlayerPrefs.SetInt("ReachedIndex", SceneManager.GetActiveScene().buildIndex + 1);
             PlayerPrefs.SetInt("UnlockedLevel", PlayerPrefs.GetInt("UnlockedLevel", 1) + 1);
             PlayerPrefs.Save();
