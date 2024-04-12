@@ -8,14 +8,16 @@ public class Finish : MonoBehaviour
 
     private bool levelCompleted = false;
 
+    [SerializeField] private AudioSource finishSoundEffect;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.name == "Player" && !levelCompleted)
         {
+            finishSoundEffect.Play();
             UnlockNewLevel();
             levelCompleted = true;
-            Invoke("CompleteLevel", 0.5f);
+            Invoke("CompleteLevel", 1f);
         }
     }
 
