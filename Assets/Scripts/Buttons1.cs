@@ -6,9 +6,14 @@ using UnityEngine.SceneManagement;
 
 public class Buttons1 : MonoBehaviour
 {
-    public void Playgame()
+    public void Levelselect()
     {
         SceneManager.LoadScene("Level Selector");
+    }
+
+    public void Startgame()
+    {
+        SceneManager.LoadScene("Controls");
     }
 
 
